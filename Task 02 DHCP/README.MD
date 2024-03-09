@@ -43,6 +43,16 @@ In die neue Konfigurationsdatei fügen Sie die folgenden Zeilen ein, die dnsmasq
 ```bash
 interface=eth0                              # Das Netzwerkinterface, das dnsmasq verwenden soll
 dhcp-range=192.168.1.50,192.168.1.150,12h   # IP-Bereich und Lease-Zeit
-
 ```
 Speichern Sie die Datei und schließen Sie den Editor mit se Testenkombination Strg + x und bestätigen sie flogende frage zur korrektheit des Dateinamens mit y (für yes)
+
+### Schritt 4: dnsmasq starten
+
+Um die Änderungen wirksam zu machen und dnsmasq zu starten, führen Sie folgenden Befehl aus:
+```bash
+sudo systemctl restart dnsmasq
+```
+### Schritt 5: dnsmasq beim Systemstart aktivieren
+
+Um sicherzustellen, dass dnsmasq automatisch beim Hochfahren des Raspberry Pi gestartet wird, aktivieren Sie den Service mit:
+````
